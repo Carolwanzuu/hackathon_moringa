@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+       
+    <div class="row">
+        {% for group in all_groups %}
+        <div class="col-md-4">
+            <div class="card mb-4" style="min-height:340px">
+                
+                <div class="card-body">
+                  
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
