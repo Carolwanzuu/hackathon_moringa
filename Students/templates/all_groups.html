@@ -1,14 +1,16 @@
 
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-{% block content %}
+{% load bootstrap3 %}
+{% block content%}
 <div class="container">
-       
+    <h1>Group</h1>
     <div class="row">
-        {% for group in all_groups %}
+        {% for x in all_groups %}
         <div class="col-md-4">
             <div class="card mb-4" style="min-height:340px">
-                
+                <h5 class="card-title">{{ x.name }}  </h5>
+                <p class="card-text">{{x.description}}</p>
                 <div class="card-body">
                   
                 </div>
