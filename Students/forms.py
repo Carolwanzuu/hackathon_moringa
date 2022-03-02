@@ -20,6 +20,11 @@ class EditProfileForm(forms.ModelForm):
         model = Profile
         exclude = ('user', 'chamagroup')
 
+class profileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['profile_picture', 'bio', 'location']
+
 
 class ResponseForm(forms.ModelForm):
     class Meta:

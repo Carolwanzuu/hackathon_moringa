@@ -43,7 +43,7 @@ def create_group(request):
         form = GroupForm()
     return render(request, 'newgroup.html', {'form': form})
 
-
+@login_required(login_url= 'login')
 def profile(request,username):
     
     return render(request, 'profile.html')
