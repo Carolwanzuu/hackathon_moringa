@@ -10,22 +10,11 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <br>
-                <button class="btn btn-md btn-info"><a href="{% url 'profile' user.username %}" class='text-white'>Login</a></button>
+                <button class="btn btn-md btn-info"><a href="{% url 'group' %}" class='text-white'>Login</a></button>
             </form>
             <br>
         </div>
-        <br>
-        <br>
-
-        <p>
-            Do you need an Account? <a style="color: red;" href="{% url 'signup' %}">Sign Up Now</a>
-        </p>
-
-        <br>
-        <br>
-        <p>y-CHAMA is a savings and investment fintech app 
-            that enables people to come together save and invest
-        </p>
+       >
     </div>
 </div>
 
