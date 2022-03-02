@@ -5,39 +5,30 @@
 {% block content%}
 <div class="container">
     <a href="{% url 'new-group' %}" class="btn btn-sm btn-info mb-2"> Chama Groups</a>
+
+    <h2>Search and Join a Chama near you</h2>
+
+    <div class="input-group">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-outline-primary">search</button>
+    </div>
+
+    <br>
+    <br>
     <div class="row">
-        
+        <h2>CREATE YOUR OWN CHAMA GROUP</h2>
         <div class="col-md-4">
             <div class="card mb-4" style="min-height:340px">
-                <img src='https://images.unsplash.com/photo-1576622085773-4eb399076362?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'>
-                <h5 class="card-title">Title  </h5>
-                <p class="card-text">{{group.description}}</p>
+                <img src='https://www.kindpng.com/picc/m/410-4108493_united-world-people-united-clipart-hd-png-download.png'>
+                <h5 class="card-title">CHAMA</h5>
+                <p class="card-text"></p>
+                <br>
+                <br>
                 <div class="card-body">
-                    <a href="{% url 'group' %}" class="btn btn-sm btn-info mb-2"> Join</a>
+                    <a href="{% url 'new-group' %}" class="btn btn-sm btn-info mb-2">Create Chama</a>
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card mb-4" style="min-height:340px">
-                <img src='https://media.istockphoto.com/photos/hand-puts-euro-coin-in-piggy-bank-closeup-on-pink-background-concept-picture-id1071381110?k=20&m=1071381110&s=170667a&w=0&h=rp7g3cVBCBVQa4ZDQYRqy7861ZsPKA0jR0jZdB40V1I='>
-                <h5 class="card-title">Title  </h5>
-                <p class="card-text">{{group.description}}</p>
-                <div class="card-body">
-                    <a href="{% url 'group' %}" class="btn btn-sm btn-info mb-2"> Join</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card mb-4" style="min-height:340px">
-                <img src='https://images.unsplash.com/photo-1559067096-49ebca3406aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'style='width':30%>
-                <h5 class="card-title">Title  </h5>
-                <p class="card-text">{{group.description}}</p>
-                <div class="card-body">
-                    <a href="{% url 'group' %}" class="btn btn-sm btn-info mb-2"> Join</a>
-                </div>
-            </div>
-        </div>
-       
     </div>
 </div>
 {% endblock %}
