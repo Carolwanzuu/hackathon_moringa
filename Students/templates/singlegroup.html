@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block content%}
+<h2 style="font-weight:600; font-size: 25px; color: black;text-align: center;">Group : {{group.name}}</h2>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1">
+            <p style="font-weight: 700;"> Members: {{members.count}}</p>
+
+            {% for member in members %}
+            <p>Names: {{member.user}}</p>
+            {%endfor%}
+        </div>
+        <br>
+        <div class="col-md-10">
+        </div>
+    </div>
+    <div class="row">
+        {% for message in messages %}
+        <div class="col-md-4">
+            <div class="card mb-4" style="min-height:340px">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Message</label>
+                            <h5 style="font-weight:600; font-size: 25px; color: black;"><a class="text-right"
+                                    style="text-decoration: none; color: black; " class="card-title">{{ message.title}}
+                            </h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Description:</label>
+                            <textarea class="form-control" rows="5" id="comment">{{message.description}}</textarea>
+                        </div>
+                        <h6 style="font-weight:100; font-size: 15px; color: black;"><a class="text-right"
+                                style="text-decoration: none; color: black; " class="card-text">{{message.date_created}}
+                        </h6>
+                    </form>
+                    <hr>
+                    <a href="{% url 'reply' message.id %}" class="btn-success btn-sm">REPLY</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<br>
+
+
+<div class="row">
+    <div class="col-md-6 ml-5 pl-5">
+        <a href="{% url 'discussion' group.id %}" class="btn btn-success btn-md" class="bold" id="story_plus"
+            style="text-align: center; align-items: center;"> ADD DISCUSSION
+        </a>
+    </div>
+    <br>
+    <br>
+    <div class="col-md-6 mx-auto">
+
+        <a href="{%url 'leavecohort' group.id %}"><button class="btn btn-success btn-md" id="story_plus"
+                onclick="M.toast({html: 'You have Successfully Left The Group',inDuration:700, completeCallback: function(){alert('Your toast was dismissed')}})"
+                id="join">Leave Group</button></a>
+    </div>
+</div>
+</div>
+{% endblock %}

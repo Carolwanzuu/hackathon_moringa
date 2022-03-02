@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(104, 104, 121);align-items: center;">
+    <div class="container-fluid">
+        <div class="sidebar-header ">
+            <h1><a href="{% url 'index' %}" class="text-center text-white">Y-CHAMA </a></h1>
+            
+        </div>
+
+        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-align-justify"></i>
+        </button>
+
+        <div class="collapse navbar-collapse list-unstyled components mr-2 ml-2" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+                {% if user.is_authenticated %}
+                
+                <li class="mb-4">
+                    <a href="{% url 'profile' user.username %}" class='text-white'>
+
+                        Profile
+                    </a>
+        
+                </li>
+                
+                </li>
+                <li class="mb-4">
+                    <a href="{% url 'edit_profile' user.username %}"class='text-white'>
+                        <i class="fas fa-edit"></i>&nbsp;
+                         Edit Profile
+                    </a>
+                </li>
+                <li class="mb-4">
+                    <a href="{% url 'group' %}" class='text-white'>
+                        <i class="fas fa-home"></i>&nbsp;
+                        &nbsp; Chama Groups
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                </li>
+
+                {% else %}
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'signup' %}">Sign Up</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
