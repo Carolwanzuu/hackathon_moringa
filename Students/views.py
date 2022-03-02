@@ -108,3 +108,6 @@ def reply(request, id):
 
 
     discussion.user = current_user
+
+def text(request):
+    return render(request, 'singlegroup.html')
