@@ -14,3 +14,14 @@ class SignupForm(UserCreationForm):
     class Meta:
         model = User
         fields = ('username', 'email', 'password1', 'password2')
+
+class EditProfileForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        exclude = ('user', 'chamagroup')
+
+
+class ResponseForm(forms.ModelForm):
+    class Meta:
+        model = Response
+        fields = ['reply']
