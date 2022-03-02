@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(74, 129, 155);align-items: center;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(114, 173, 201);align-items: center;">
     <div class="container-fluid">
         <div class="sidebar-header ">
             <h1><a href="{% url 'index' %}" class="text-center text-white" style="text-align:center; justify-content: center;padding-left: 250px;">Y-CHAMA </a></h1>
@@ -16,10 +16,7 @@
                 {% if user.is_authenticated %}
                 
                 <li class="mb-4">
-                    <a href="{% url 'profile' user.username %}" class='text-white'>
-
-                        Profile
-                    </a>
+                    <a href="{% url 'profile' user.username %}" class='text-white'>Profile</a>
         
                 </li>
                 
