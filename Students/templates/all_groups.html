@@ -12,10 +12,7 @@
         <input type="search" class="form-control rounded" placeholder="Search..." aria-label="Search" aria-describedby="search-addon" />
         <button type="button" class="btn btn-info">search</button>
         
-        <ul>
-            <li>{{chamaGroup.name}}</li>
-            <button>send join request</button>
-        </ul> 
+      
     </div>
 
     <br>
@@ -27,11 +24,11 @@
             <div class="card mb-4 ml-4" style="min-height:340px">
                 <img src='https://www.kindpng.com/picc/m/410-4108493_united-world-people-united-clipart-hd-png-download.png'>
                 <h5 class="card-title">CHAMA</h5>
-                <p class="card-text"></p>
+                <p class="card-text"><a href="{% url 'rules' %}" style="color: black;">Rules and Regulations</a></p>
                 <br>
                 <br>
                 <div class="card-body">
-                    <a href="{% url 'new-group' %}" class="btn btn-md btn-info mb-2">Create Chama</a>
+                    <a href="{% url 'new-group' %}" class="btn btn-lg btn-info mb-2">Create Chama</a>
                 </div>
             </div>
             

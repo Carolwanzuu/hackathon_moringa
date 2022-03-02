@@ -111,3 +111,6 @@ def reply(request, id):
 
 def text(request):
     return render(request, 'singlegroup.html')
+
+def rules(request):
+    return render(request, 'rules.html')
