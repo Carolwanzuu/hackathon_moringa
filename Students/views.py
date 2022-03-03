@@ -6,7 +6,6 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
-@login_required(login_url='login')
 def index(request):
     return render(request, 'index.html')
 
@@ -113,3 +112,9 @@ def reply(request, id):
 
 
     discussion.user = current_user
+
+def text(request):
+    return render(request, 'singlegroup.html')
+
+def rules(request):
+    return render(request, 'rules.html')

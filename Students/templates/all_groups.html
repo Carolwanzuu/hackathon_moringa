@@ -3,29 +3,31 @@
 {% load crispy_forms_tags %}
 {% load bootstrap3 %}
 {% block content%}
-<div class="container">
-    <a href="{% url 'new-group' %}" class="btn btn-sm btn-info mb-2"> Chama Groups</a>
-
+<div class="container-flui">
+    <br>
+    <br>
     <h2>Search and Join a Chama near you</h2>
-
     <div class="input-group">
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
-        <button type="button" class="btn btn-outline-primary">search</button>
-    </div>
-
-    <br>
-    <br>
+        <input type="search" class="form-control rounded" placeholder="Search..." aria-label="Search" aria-describedby="search-addon" />
+        <button type="button" class="btn btn-info">search</button>
+    </div>  
+    
     <div class="row">
-        <h2>CREATE YOUR OWN CHAMA GROUP</h2>
-        <div class="col-md-4">
-            <div class="card mb-4" style="min-height:340px">
-                <img src='https://www.kindpng.com/picc/m/410-4108493_united-world-people-united-clipart-hd-png-download.png'>
+        
+        <div class="col-md-5">
+            <h2 style="padding-top: 40%;">Create Your Own  CHAMA Group</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="col-md-5">
+            <div class="card mb-4 ml-5" style="min-height:340px; margin-top: 60px;">
+                <img style="align-items: center; justify-content: center;" src='https://www.kindpng.com/picc/m/410-4108493_united-world-people-united-clipart-hd-png-download.png'>
+            
                 <h5 class="card-title">CHAMA</h5>
-                <p class="card-text"></p>
+                <p class="card-text"><a href="{% url 'rules' %}" style="color: black;">Rules and Regulations</a></p>
                 <br>
                 <br>
                 <div class="card-body">
-                    <a href="{% url 'new-group' %}" class="btn btn-sm btn-info mb-2">Create Chama</a>
+                    <a href="{% url 'new-group' %}" class="btn btn-lg btn-info mb-2">Create Chama</a>
                 </div>
             </div>
             

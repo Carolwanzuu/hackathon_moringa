@@ -17,6 +17,8 @@ urlpatterns = [
     path('new-group/', views.create_group, name='new-group'),
     path('group/<int:id>/', views.groupdiscussions, name = 'groupdiscussions'),
     path('reply/<int:id>/', views.reply, name = 'reply'),
+    path('text', views.text, name='text'),
+    path('rules', views.rules, name='rules'),
 ]
 
 if settings.DEBUG:

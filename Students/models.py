@@ -15,7 +15,7 @@ class chamaGroup(models.Model):
         return self.name
 
 class Profile(models.Model):
-    username = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile',default=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile',default=True)
   
     bio = models.TextField(max_length=254, blank=True)
     profile_picture = models.ImageField(upload_to='images/', default='default.png')
@@ -31,9 +31,7 @@ class Profile(models.Model):
         if created:
             Profile.objects.create(user=instance)
 
-    @receiver(post_save, sender=User)
-    def save_profile(sender, instance, **kwargs):
-        instance.profile.save()
+   
   
   
 

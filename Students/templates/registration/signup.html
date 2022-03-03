@@ -19,29 +19,24 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-<<<<<<< HEAD
-            <form action="" method="post" novalidate>
-                {% csrf_token %}
-                {{ form|crispy }}
-                <br>
-                <button class="btn btn-md btn-info">Sign Up</button>
-            </form>
-=======
 
             <div class="signup">
 
                 <form class="form" action="" method="post" novalidate>
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-sm btn-info">Sign Up</button>
+                    <button class="btn btn-md btn-info" ><a href="{% url 'login' %}"style="color:white">Sign Up</a></button>
                 </form>
 
             </div>
-            <p>y-CHAMA is a savings and investment fintech app 
-                that enables people to come together save and invest
+            <br>
+            <p>
+                Already have an Account? <button><a style="color: rgb(43, 169, 219);" href="{% url 'login' %}">LogIn</a></button>
             </p>
+            <br>
+            <br>
+            
 
->>>>>>> 1036fb24169bebf96024c5c6019864960f7e49a5
         </div>
         <div class="col-md-3"></div>
     </div>
