@@ -10,7 +10,7 @@
                 {% csrf_token %}
                 {{ form|crispy }}
                 <br>
-                <button class="btn btn-md btn-info"><a href="{% url 'profile' user.username %}" class='text-white'>Login</a></button>
+                <button class="btn btn-md btn-info"><a href="{% url 'group'  %}" class='text-white'>Login</a></button>
             </form>
             <br>
         </div>

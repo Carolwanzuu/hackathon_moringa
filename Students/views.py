@@ -45,8 +45,12 @@ def create_group(request):
 
 @login_required(login_url= 'login')
 def profile(request,username):
-    
-    return render(request, 'profile.html')
+    current_user = request.user
+    newprofile = Profile.objects.all()
+	 
+	 
+
+    return render(request, 'profile.html',{"current_user":current_user,"profile":profile})
 
 
 def edit_profile(request, username):
